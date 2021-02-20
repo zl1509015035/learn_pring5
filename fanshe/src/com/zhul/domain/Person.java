@@ -4,8 +4,12 @@ public class Person {
     private String name;
     private int age;
 
-    public Person(){
+    public String a;
+    protected String b;
+    String c;
+    private String d;
 
+    public Person() {
     }
 
     public Person(String name, int age) {
@@ -34,6 +38,19 @@ public class Person {
         return "Person{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
+                ", a='" + a + '\'' +
+                ", b='" + b + '\'' +
+                ", c='" + c + '\'' +
+                ", d='" + d + '\'' +
                 '}';
+    }
+
+
+    public void eat() {
+        System.out.println("eat...");
+    }
+
+    public void eat(String food) {
+        System.out.println("eat..." + food);
     }
 }
