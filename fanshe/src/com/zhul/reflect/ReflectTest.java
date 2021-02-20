@@ -20,7 +20,7 @@ public class ReflectTest {
 /*        Person p = new Person();
         p.eat();*/
 
-//1.加载配置文件
+        //1.加载配置文件
         //1.1创建Properties对象
         Properties pro = new Properties();
         //1.2加载配置文件，转换为一个集合
