@@ -6,16 +6,15 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
-    <!--1 集合类型属性注入-->
-    <util:list id="bookList">
-        <!-- 对象用ref标签 -->
-        <value>西游记</value>
-        <value>红楼梦</value>
-        <value>三国演义</value>
-    </util:list>
 
-    <!--2.提取list集合类型属性注入使用-->
-    <bean id="book" class="com.zhul.spring5.collectiontype.Book" scope="prototype">
-        <property name="list" ref="bookList"></property>
+    <!-- 实现自动装配
+     bean标签属性autowire，配置自动装配
+     autowire属性常用两个值:
+        byName根据名称注入，注入值bean的id和类属性名称一样
+        byType根据属性类型注入
+     -->
+    <bean id="emp" class="com.zhul.spring5.autowire.Employee" autowire="byName">
+<!--    手动装配    <property name="department" ref="dept"></property>-->
     </bean>
+    <bean id="department" class="com.zhul.spring5.autowire.Department"></bean>
 </beans>
