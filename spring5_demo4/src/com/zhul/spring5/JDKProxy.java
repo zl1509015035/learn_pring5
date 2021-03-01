@@ -1,7 +1,5 @@
 package com.zhul.spring5;
 
-import org.springframework.validation.ObjectError;
-
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
