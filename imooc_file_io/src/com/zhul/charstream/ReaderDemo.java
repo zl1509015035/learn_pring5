@@ -13,14 +13,16 @@ public class ReaderDemo {
 
 	public static void main(String[] args) {
 		try {
-			FileInputStream fis=new FileInputStream("imooc.txt");
-			InputStreamReader isr=new InputStreamReader(fis,"GBK");
+			FileInputStream fis=new FileInputStream("imooc_file_io/imooc.txt");
+			InputStreamReader isr=new InputStreamReader(fis,"UTF-8");
 			BufferedReader br=new BufferedReader(isr);
-			FileOutputStream fos=new FileOutputStream("imooc1.txt");
-			OutputStreamWriter osw=new OutputStreamWriter(fos,"GBK");
+
+			
+			FileOutputStream fos=new FileOutputStream("imooc_file_io/imooc1.txt");
+			OutputStreamWriter osw=new OutputStreamWriter(fos,"UTF-8");
 			BufferedWriter bw=new BufferedWriter(osw);
 			int n=0;
-			char[] cbuf=new char[10];
+			char[] cbuf=new char[20];
 //		    while((n=isr.read())!=-1){
 //		    	   System.out.print((char)n);
 //		    }

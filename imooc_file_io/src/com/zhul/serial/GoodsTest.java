@@ -13,9 +13,9 @@ public class GoodsTest {
 		// 定义Goods类的对象
 		Goods goods1 = new Goods("gd001", "电脑", 3000);
 		try {
-			FileOutputStream fos = new FileOutputStream("imooc.txt");
+			FileOutputStream fos = new FileOutputStream("imooc_file_io/imooc.txt");
 			ObjectOutputStream oos = new ObjectOutputStream(fos);
-			FileInputStream fis = new FileInputStream("imooc.txt");
+			FileInputStream fis = new FileInputStream("imooc_file_io/imooc.txt");
 			ObjectInputStream ois = new ObjectInputStream(fis);
 			// 将Goods对象信息写入文件
 			oos.writeObject(goods1);
