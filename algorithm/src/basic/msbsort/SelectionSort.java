@@ -1,4 +1,4 @@
-package basic.sort;
+package basic.msbsort;
 
 public class SelectionSort {
     public static void main(String[] args) {
@@ -22,13 +22,15 @@ public class SelectionSort {
 
             System.out.println("minPos:" + minPos);
 
-            swap(arr,i,minPos);
+            swap(arr, i, minPos);
+
         }
 
 
         long endTime = System.currentTimeMillis();
 
         System.out.println(endTime - startTime);
+        print(arr);
 
 
     }
@@ -43,5 +45,24 @@ public class SelectionSort {
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + " ");
         }
+    }
+
+    static int[] sort(int[] arr){
+        for (int i = 0; i < arr.length - 1; i++) {
+            //最小值
+            int minPos = i;
+
+            for (int j = i + 1; j < arr.length; j++) {
+/*                if (arr[j] < arr[minPos]) {
+                    minPos = j;
+                }*/
+                //判断最小值
+                minPos = arr[j] < arr[minPos] ? j : minPos;
+            }
+
+            swap(arr, i, minPos);
+
+        }
+        return arr;
     }
 }
