@@ -23,7 +23,8 @@ public class DataChecker {
 
         Arrays.sort(arr);
 //        SelectionSort.sort(arr2);
-        MaoPaoSort.sort(arr2);
+//        MaoPaoSort.sort(arr2);
+        InsertionSort.sort(arr2);
 
         boolean same = true;
 
