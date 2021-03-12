@@ -9,7 +9,7 @@ public class BubbleSort {
 
     //每一循环将最大的放到最后面，然后检索长度-1，因为最大的在最后面，不用检索比较
     static void sort(int[] a) {
-        for (int i=a.length-1;i>0;i--) {
+        for (int i = a.length - 1; i > 0; i--) {
             findMax(a, i);
         }
     }
