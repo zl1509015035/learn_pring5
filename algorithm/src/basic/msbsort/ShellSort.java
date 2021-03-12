@@ -11,14 +11,14 @@ public class ShellSort {
     static void sort(int[] a) {
 
 //        for (int gap = a.length >> 1; gap > 0; gap /= 2) {
-        //优化 使用序列
+        //优化 使用knuth序列 或者是用a.leng / 2
         //计算间隔序列
         int h = 1;
         while (h <= a.length / 3) {
             h = h * 3 + 1;
         }
 
-        for (int gap = h; gap > 0; gap =(gap - 1) / 3) {
+        for (int gap = h; gap > 0; gap = (gap - 1) / 3) {
             for (int i = gap; i < a.length; i++) {
                 //索引与前面的索引比较 ，若小，便交换位置
                 for (int j = i; j > gap - 1; j -= gap) {
