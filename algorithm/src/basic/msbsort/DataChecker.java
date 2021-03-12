@@ -24,8 +24,8 @@ public class DataChecker {
         Arrays.sort(arr);
 //        SelectionSort.sort(arr2);
 //        MaoPaoSort.sort(arr2);
-        InsertionSort.sort(arr2);
-
+//        InsertionSort.sort(arr2);
+        ShellSort.sort(arr2);
         boolean same = true;
 
         for (int i = 0; i < arr2.length; i++) {
